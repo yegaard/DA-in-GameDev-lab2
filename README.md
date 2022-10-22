@@ -40,7 +40,7 @@ sheets и google drive.
 - Реализовать запись данных из скрипта на python в google-таблицу. Данные
 описывают изменение темпа инфляции на протяжении 11 отсчётных периодов, с
 учётом стоимости игрового объекта в каждый период.
-
+"`"
 import gspread
 import numpy as np
 gc = gspread.service_account(filename='unitydatascience-364809-75d960e3236e.json')
@@ -60,6 +60,7 @@ while i <= len(mon):
         sh.sheet1.update(('B' + str(i)), str(price[i-1]))
         sh.sheet1.update(('C' + str(i)), str(tempInf))
         print(tempInf)
+
 
 - Создать новый проект на Unity, который будет получать данные из google-
 таблицы, в которую были записаны данные в предыдущем пункте.
